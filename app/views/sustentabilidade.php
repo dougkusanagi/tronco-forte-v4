@@ -446,19 +446,19 @@
 <body>
     <header class="header">
         <nav class="nav-container">
-            <a href="/" class="logo">TRONCO FORTE</a>
+            <a href="<?= $base_path ?: '/' ?>" class="logo">TRONCO FORTE</a>
             <ul class="nav-menu">
-                <li><a href="/produtos">Produtos</a></li>
-                <li><a href="/projetos">Projetos</a></li>
-                <li><a href="/sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/contato">Contato</a></li>
+                <li><a href="<?= $base_path ?>/produtos">Produtos</a></li>
+                <li><a href="<?= $base_path ?>/projetos">Projetos</a></li>
+                <li><a href="<?= $base_path ?>/sustentabilidade">Sustentabilidade</a></li>
+                <li><a href="<?= $base_path ?>/sobre">Sobre</a></li>
+                <li><a href="<?= $base_path ?>/contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <a href="/" class="back-link">
+        <a href="<?= $base_path ?: '/' ?>" class="back-link">
             <i class="fas fa-arrow-left"></i>
             Voltar para Home
         </a>

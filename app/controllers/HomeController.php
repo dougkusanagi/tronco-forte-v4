@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use flight\Engine;
+use app\utils\UrlHelper;
 
 class HomeController
 {
@@ -11,6 +12,17 @@ class HomeController
     public function __construct(Engine $app)
     {
         $this->app = $app;
+    }
+    
+    /**
+     * Get common data for all views
+     */
+    private function getCommonData(): array
+    {
+        return [
+            'base_path' => UrlHelper::getBasePath(),
+            'url_helper' => UrlHelper::class
+        ];
     }
 
     public function index(): void
@@ -159,32 +171,38 @@ class HomeController
             ]
         ];
 
-        $this->app->render('homepage', $data);
+        $this->app->render('homepage', array_merge($data, $this->getCommonData()));
     }
 
     public function produtos(): void
     {
-        $this->app->render('produtos', ['page_title' => 'Nossos Produtos - Tronco Forte']);
+        dd(UrlHelper::getBasePath());
+        $data = ['page_title' => 'Nossos Produtos - Tronco Forte'];
+        $this->app->render('produtos', array_merge($data, $this->getCommonData()));
     }
 
     public function projetos(): void
     {
-        $this->app->render('projetos', ['page_title' => 'Nossos Projetos - Tronco Forte']);
+        $data = ['page_title' => 'Nossos Projetos - Tronco Forte'];
+        $this->app->render('projetos', array_merge($data, $this->getCommonData()));
     }
 
     public function sustentabilidade(): void
     {
-        $this->app->render('sustentabilidade', ['page_title' => 'Sustentabilidade - Tronco Forte']);
+        $data = ['page_title' => 'Sustentabilidade - Tronco Forte'];
+        $this->app->render('sustentabilidade', array_merge($data, $this->getCommonData()));
     }
 
     public function sobre(): void
     {
-        $this->app->render('sobre', ['page_title' => 'Sobre Nós - Tronco Forte']);
+        $data = ['page_title' => 'Sobre Nós - Tronco Forte'];
+        $this->app->render('sobre', array_merge($data, $this->getCommonData()));
     }
 
     public function contato(): void
     {
-        $this->app->render('contato', ['page_title' => 'Contato - Tronco Forte']);
+        $data = ['page_title' => 'Contato - Tronco Forte'];
+        $this->app->render('contato', array_merge($data, $this->getCommonData()));
     }
 
     public function submitContact(): void

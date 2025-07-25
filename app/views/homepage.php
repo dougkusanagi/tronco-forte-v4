@@ -795,13 +795,13 @@
     <!-- Header -->
     <header class="header" id="header">
         <nav class="nav-container">
-            <a href="/" class="logo">TRONCO FORTE</a>
+            <a href="<?= $base_path ?: '/' ?>" class="logo">TRONCO FORTE</a>
             <ul class="nav-menu">
-                <li><a href="/produtos">Produtos</a></li>
-                <li><a href="/projetos">Projetos</a></li>
-                <li><a href="/sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/contato">Contato</a></li>
+                <li><a href="<?= $base_path ?>/produtos">Produtos</a></li>
+                <li><a href="<?= $base_path ?>/projetos">Projetos</a></li>
+                <li><a href="<?= $base_path ?>/sustentabilidade">Sustentabilidade</a></li>
+                <li><a href="<?= $base_path ?>/sobre">Sobre</a></li>
+                <li><a href="<?= $base_path ?>/contato">Contato</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -817,8 +817,8 @@
             <h1 class="hero-title font-display"><?= $hero['title'] ?></h1>
             <p class="hero-subtitle"><?= $hero['subtitle'] ?></p>
             <div class="hero-buttons">
-                <a href="/produtos" class="btn btn-secondary">Nossos Produtos</a>
-                <a href="/contato" class="btn btn-primary">Solicitar Orçamento</a>
+                <a href="<?= $base_path ?>/produtos" class="btn btn-secondary">Nossos Produtos</a>
+                <a href="<?= $base_path ?>/contato" class="btn btn-primary">Solicitar Orçamento</a>
             </div>
         </div>
     </section>
@@ -905,7 +905,7 @@
                 <div class="carousel-dots" id="carouselDots"></div>
             </div>
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="/projetos" class="btn btn-primary">Ver Todos os Projetos</a>
+                <a href="<?= $base_path ?>/projetos" class="btn btn-primary">Ver Todos os Projetos</a>
             </div>
         </div>
     </section>
@@ -1030,28 +1030,28 @@
                 <div class="footer-section">
                     <h3>Produtos</h3>
                     <ul>
-                        <li><a href="/produtos">Madeira para Construção</a></li>
-                        <li><a href="/produtos">Pisos e Decks</a></li>
-                        <li><a href="/produtos">Madeira Tratada</a></li>
-                        <li><a href="/produtos">Móveis Sob Medida</a></li>
+                        <li><a href="<?= $base_path ?>/produtos">Madeira para Construção</a></li>
+                        <li><a href="<?= $base_path ?>/produtos">Pisos e Decks</a></li>
+                        <li><a href="<?= $base_path ?>/produtos">Madeira Tratada</a></li>
+                        <li><a href="<?= $base_path ?>/produtos">Móveis Sob Medida</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Serviços</h3>
                     <ul>
-                        <li><a href="/projetos">Projetos Personalizados</a></li>
-                        <li><a href="/sustentabilidade">Consultoria Sustentável</a></li>
-                        <li><a href="/contato">Orçamentos</a></li>
-                        <li><a href="/contato">Suporte Técnico</a></li>
+                        <li><a href="<?= $base_path ?>/projetos">Projetos Personalizados</a></li>
+                        <li><a href="<?= $base_path ?>/sustentabilidade">Consultoria Sustentável</a></li>
+                        <li><a href="<?= $base_path ?>/contato">Orçamentos</a></li>
+                        <li><a href="<?= $base_path ?>/contato">Suporte Técnico</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Empresa</h3>
                     <ul>
-                        <li><a href="/sobre">Nossa História</a></li>
-                        <li><a href="/sustentabilidade">Sustentabilidade</a></li>
-                        <li><a href="/contato">Trabalhe Conosco</a></li>
-                        <li><a href="/contato">Fale Conosco</a></li>
+                        <li><a href="<?= $base_path ?>/sobre">Nossa História</a></li>
+                        <li><a href="<?= $base_path ?>/sustentabilidade">Sustentabilidade</a></li>
+                        <li><a href="<?= $base_path ?>/contato">Trabalhe Conosco</a></li>
+                        <li><a href="<?= $base_path ?>/contato">Fale Conosco</a></li>
                     </ul>
                 </div>
             </div>

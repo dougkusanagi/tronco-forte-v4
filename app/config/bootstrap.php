@@ -23,6 +23,12 @@ $app = Flight::app();
  */
 $config = require('config.php');
 
+/*
+ * Load the helpers file
+ * P.S. You can define your own helper functions in this file.
+ */
+require('helpers.php');
+
 // Whip out the ol' router and we'll pass that to the routes file
 $router = $app->router();
 
