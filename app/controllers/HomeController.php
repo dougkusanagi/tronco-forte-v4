@@ -176,7 +176,6 @@ class HomeController
 
     public function produtos(): void
     {
-        dd(UrlHelper::getBasePath());
         $data = ['page_title' => 'Nossos Produtos - Tronco Forte'];
         $this->app->render('produtos', array_merge($data, $this->getCommonData()));
     }
